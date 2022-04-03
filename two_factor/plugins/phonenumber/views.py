@@ -5,8 +5,8 @@ from django.views.generic import DeleteView
 from django_otp.decorators import otp_required
 from django_otp.util import random_hex
 
-from two_factor.forms import DeviceValidationForm
-from two_factor.views.utils import (
+from ...forms import DeviceValidationForm
+from ...views.utils import (
     IdempotentSessionWizardView, class_view_decorator,
 )
 

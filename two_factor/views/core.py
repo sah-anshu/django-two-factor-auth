@@ -33,12 +33,12 @@ from django_otp.decorators import otp_required
 from django_otp.plugins.otp_static.models import StaticDevice, StaticToken
 from django_otp.util import random_hex
 
-from two_factor import signals
-from two_factor.plugins.phonenumber.utils import (
+from .. import signals
+from ..plugins.phonenumber.utils import (
     backup_phones, get_available_phone_methods,
 )
-from two_factor.plugins.registry import registry
-from two_factor.utils import totp_digits
+from ..plugins.registry import registry
+from ..utils import totp_digits
 
 from ..forms import (
     AuthenticationTokenForm, BackupTokenForm, DeviceValidationForm, MethodForm,

@@ -8,7 +8,7 @@ from django_otp.oath import totp
 from django_otp.util import hex_validator, random_hex
 from phonenumber_field.modelfields import PhoneNumberField
 
-from two_factor.gateways import make_call, send_sms
+from ...gateways import make_call, send_sms
 
 from .utils import format_phone_number, mask_phone_number
 

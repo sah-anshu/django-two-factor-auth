@@ -1,9 +1,9 @@
 from django.urls import path
 
-from two_factor.plugins.phonenumber.views import (
+from .plugins.phonenumber.views import (
     PhoneDeleteView, PhoneSetupView,
 )
-from two_factor.views import (
+from .views import (
     BackupTokensView, DisableView, LoginView, ProfileView, QRGeneratorView,
     SetupCompleteView, SetupView,
 )

@@ -3,7 +3,7 @@ from urllib.parse import quote, urlencode
 from django.conf import settings
 from django_otp import devices_for_user
 
-from two_factor.plugins.registry import registry
+from .plugins.registry import registry
 
 USER_DEFAULT_DEVICE_ATTR_NAME = "_default_device"
 
