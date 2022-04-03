@@ -484,7 +484,11 @@ class SetupView(IdempotentSessionWizardView):
         method = self.get_method()
         # TOTPDeviceForm
         if method.code == 'generator':
-            form = [form for form in form_list if isinstance(form, TOTPDeviceForm)][0]
+            #form = [form for form in form_list if isinstance(form, TOTPDeviceForm)][0]
+            for form in form_list:
+                if isinstance(form, TOTPDeviceForm):
+                    break;
+                    
             device = form.save()
 
         # PhoneNumberForm / YubiKeyDeviceForm
